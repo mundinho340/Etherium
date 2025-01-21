@@ -60,3 +60,14 @@
 ##Before diving any further we must understand the cryptographic hash function. Let's break this term down a bit. A hash function is a function which takes an input of any size and turns it into a fixed size output. Let's imagine a hash function that takes an input of any size and returns a fixed 32 byte output:
 
 ![image](https://github.com/user-attachments/assets/ad33afd4-bc85-4a00-9e06-0c8cfc813c09)
+
+
+Cryptographic Hashes
+
+The goal of this challenge is to learn how to create and compare SHA256 hashes using ethereum-crypto (a library we’ll make quite a bit of use of throughout this course).
+
+The coding challenge will be to derive someone’s favorite color from a given hash of that color.
+
+Good luck!
+https://emn178.github.io/online-tools/sha256
+
