@@ -8,7 +8,7 @@ const blockchain = new Blockchain();
 const block = new Block("Charlie sent Dave 2 BTC");
 
 blockchain.addBlock(block);
-
+//update block in the blockchain
 console.log(blockchain.chain.length); // 2
 
 //Remember we should have both the genesis block and the new block now.
