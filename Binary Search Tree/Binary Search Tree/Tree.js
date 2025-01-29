@@ -26,6 +26,26 @@ class Tree {
                 }
             }
     }
+
+    hasNode(value) {
+        return this.search(this.root, value);
+    }
+
+    search(node, value) {
+        if (node === null) {
+            return false;
+        }
+
+        if (value === node.data) {
+            return true;
+        }
+
+        if (value < node.data) {
+            return this.search(node.left, value); 
+        } else {
+            return this.search(node.right, value); 
+        }
+    }
 }
 
 module.exports = Tree;
