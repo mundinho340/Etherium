@@ -5,7 +5,12 @@ class Tree {
 
     addNode(node){
         this.node= node;
-        this.root=this.node;
+        if(this.root== null){
+            this.root=this.node;   
+        }
+        this.root.left =node;
+        this.root.right =node;
+
     }
 }
 
