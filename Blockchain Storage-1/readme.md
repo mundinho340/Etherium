@@ -16,3 +16,5 @@ Thanks to Merkle trees, storage on the blockchain is efficient - you must only c
 
 Thanks to Merkle trees, there is an efficient way to verify that some data exists in a root hash. Take the image below... can you imagine how bloated each block would be if every single tx needed to be stored? Much better to store just ONE root hash representing all the transactions per block!
 
+https://blog.ethereum.org/2015/12/03/how-to-build-your-own-cryptocurrency
+
