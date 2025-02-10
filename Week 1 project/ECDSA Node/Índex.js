@@ -1,2 +1,3 @@
 
 sudo su 
+sudo apt 
