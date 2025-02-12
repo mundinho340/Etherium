@@ -40,7 +40,7 @@
 //     Feel free to pick your own favorite foods and add them to the list and food values as well!
   
   
-  // SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 
 contract Contract {
