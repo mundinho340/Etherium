@@ -8,5 +8,6 @@ interface IHero {
 contract Sidekick {
     function sendAlert(address hero) external {
         // TODO: alert the hero using the IHero interface
+        IHero(hero).alert();
     }
 }
