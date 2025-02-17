@@ -6,15 +6,14 @@ contract Contract {
     function addMember(address _member) external {
         members[_member] = true;
     }
-
-    function isMember(address _member) external {
-        for(uint i=0; i< members.length; i++){
-            if(members[i] === _members){
-                return true;
-            }
-            else{
-                return false;
-            }
+    
+    function isMember(address _member) external view returns(bool){
+        if(members[_member]){
+            return true;
         }
+        else{
+            return false;
+        }
+        
     }
 }
