@@ -16,4 +16,8 @@ contract Contract {
         }
         
     }
+
+    function removeMember(address _member) external {
+        members[_member] =false;
+    }
 }
