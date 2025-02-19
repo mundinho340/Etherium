@@ -15,5 +15,12 @@ contract Token {
         return balance[_address]; 
     }
 
+    function transfer(address recipient, uint amount) public  returns (bool){
+        require(balance[msg.sender]>=amount, "Saldo insuficiente");
+        balance[msg.sender]-=amount;
+        balance[recipient]+=amount;
+        return true;
+    }
+
 
 }
