@@ -6,6 +6,7 @@ contract Token {
     string public name = "Moeda Electronica Descentralizada";
     string public symbol ="MED";
     uint8 public decimals = 18;
+    event Transfer(address from, address to, uint value);
     mapping(address => uint) public balance;
     constructor (){
         totalSupply = 1000 *10**decimals;
@@ -19,6 +20,7 @@ contract Token {
         require(balance[msg.sender]>=amount, "Saldo insuficiente");
         balance[msg.sender]-=amount;
         balance[recipient]+=amount;
+        emit Transfer(msg.sender, recipient, amount);
         return true;
     }
 
