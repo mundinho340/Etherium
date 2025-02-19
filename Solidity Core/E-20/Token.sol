@@ -7,7 +7,13 @@ contract Token {
     string public symbol ="MED";
     uint8 public decimals = 18;
     mapping(address => uint) public balance;
-    function balanceOf(address _address) external view returns(uint){
-        return balance[_address];
+    constructor (){
+        totalSupply = 1000 *10**decimals;
+        balance[msg.sender] = totalSupply;
     }
+    function balanceOf(address _address) external view returns(uint){
+        return balance[_address]; 
+    }
+
+
 }
