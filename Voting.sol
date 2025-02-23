@@ -16,8 +16,16 @@ contract Voting {
         proposal.yesCount=0;
         proposal.noCount=0;
         proposals.push(proposal);
+    }
 
-
+    function castVote(uint proposalld, bool vote) external {
+        for(uint i=0; i<proposals.length; i++){
+            if(vote==true){
+                proposals[i].yesCount+=1;
+            }else{
+                proposals[i].noCount+=1;
+            }
+        }
     }
     
 }
