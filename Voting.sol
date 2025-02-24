@@ -8,6 +8,9 @@ contract Voting {
         uint yesCount;
         uint noCount;
     }
+
+//create new proposal
+
     Proposal [] public proposals;
     function newProposal(address target, bytes memory data) external {
         Proposal memory proposal;
