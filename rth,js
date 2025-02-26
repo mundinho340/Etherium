@@ -1,13 +1,17 @@
-const ethers = require('ethers');
-const { Wallet } = ethers;
+const { providers } = require('ethers');
+const { ganacheProvider } = require('./config');
 
-// create a wallet with a private key
-const wallet1 = new Wallet( /* insert private key here */ );
+const provider = new providers.Web3Provider(ganacheProvider);
 
-// create a wallet from mnemonic
-const wallet2 = Wallet.fromMnemonic( /* insert mnemonic here */ );
-
-module.exports = {
-    wallet1,
-    wallet2,
+/**
+ * Given an ethereum address find all the addresses
+ * that were sent ether from that address
+ * @param {string} address - The hexadecimal address for the sender
+ * @async
+ * @returns {Array} all the addresses that received ether
+ */
+async function findEther(address) {
+    
 }
+
+module.exports = findEther;
