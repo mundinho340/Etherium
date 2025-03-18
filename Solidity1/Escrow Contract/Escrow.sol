@@ -6,6 +6,7 @@ contract Escrow{
     address public beneficiary;
     address public arbiter;
     bool public isApproved;
+    event Approved(uint);
 
     modifier onlyowner{
         require(msg.sender == arbiter);
@@ -20,8 +21,10 @@ contract Escrow{
 
     function approve() external onlyowner{
         uint balance = address(this).balance;
-        beneficiary.call{value: balance}("");
+        (bool success,) =beneficiary.call{value: balance}("");
+        require(success, "Erro saldo insuficiente");
         isApproved=true;
+        emit Approved(balance);
     }
 
 
